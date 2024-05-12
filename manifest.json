@@ -1,0 +1,55 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "A time logger that logs the time.",
+        "name": "Time Logger",
+        "uuid": "85140927-3fd2-42dd-a303-9661c3fdaa61",
+        "version": [ 0, 0, 1 ],
+        "min_engine_version": [ 1, 19, 50 ]
+    },
+    "modules": [
+        {
+            "description": "A time logger that logs the time.",
+            "type": "data",
+            "uuid": "d583c948-31ce-46e8-a960-1f29d0d00a74",
+            "version": [0, 0, 1]
+        }
+    ],
+    "subpacks": [
+		{
+			"folder_name": "log_0",
+			"name": "Reset Time Log",
+			"memory_tier": 0
+		},
+        {
+			"folder_name": "log_1",
+			"name": "Time Log [1 min]",
+			"memory_tier": 1
+		},
+		{
+			"folder_name": "log_2",
+			"name": "Time Log [2 min]",
+			"memory_tier": 2
+		},
+		{
+			"folder_name": "log_5",
+			"name": "Time Log [5 min]",
+			"memory_tier": 3
+		},
+		{
+			"folder_name": "log_10",
+			"name": "Time Log [10 min]",
+			"memory_tier": 4
+		},
+		{
+			"folder_name": "log_15",
+			"name": "Time Log [15 min]",
+			"memory_tier": 5
+		},
+		{
+			"folder_name": "log_20",
+			"name": "Time Log [20 min]",
+			"memory_tier": 6
+		}
+	]
+}
