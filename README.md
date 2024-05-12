@@ -1,6 +1,6 @@
 # Time Logger
 
-A time logger that logs the time.
+A time logger that logs the time. It starts logging from the moment you create your world and persists the time even after you close the game and re-open it.
 
 # Subpacks
 
