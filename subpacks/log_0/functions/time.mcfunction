@@ -10,5 +10,6 @@ execute if score log events matches 0 run scoreboard players set days ticks 0
 
 execute if score log events matches 0 run scoreboard players set hoursg ticks 0
 execute if score log events matches 0 run scoreboard players set daysg ticks 0
+execute if score log events matches 0 run scoreboard players set yearsg ticks 0
 
-tellraw @a {"rawtext":[{"text":"§6§lIRL: §r§d"}, {"score":{"name": "days", "objective": "ticks"}}, {"text" :"d §r§a"}, {"score":{"name": "hours","objective": "ticks"}}, {"text" : "h §r§b"}, {"score":{"name": "minutes", "objective": "ticks"}}, {"text" : "m §r- "}, {"text" : "§i§lMC: §r§d"}, {"score":{"name": "daysg","objective": "ticks"}}, {"text" :"d §r§a"}, {"score":{"name": "hoursg","objective": "ticks"}}, {"text" : "h §r§b"}]}
+tellraw @a {"rawtext":[{"text":"§6§lIRL: §r§d"}, {"score":{"name": "days", "objective": "ticks"}}, {"text" :"d §r§a"}, {"score":{"name": "hours","objective": "ticks"}}, {"text" : "h §r§b"}, {"score":{"name": "minutes", "objective": "ticks"}}, {"text" : "m §r- "}, {"text" : "§i§lMC: §r§c"}, {"score":{"name": "yearsg","objective": "ticks"}}, {"text" :"y §r§d"}, {"score":{"name": "daysg","objective": "ticks"}}, {"text" :"d §r§a"}, {"score":{"name": "hoursg","objective": "ticks"}}, {"text" : "h §r§b"}]}

@@ -9,6 +9,7 @@ scoreboard players set 1d ticks 1728000
 
 scoreboard players set 1hg ticks 1000
 scoreboard players set 1dg ticks 24000
+scoreboard players set 1yg ticks 8760000
 
 scoreboard players add timer ticks 1
 
@@ -17,6 +18,7 @@ scoreboard players operation hours events %= 1s ticks
 scoreboard players operation days events %= 1s ticks
 scoreboard players operation hoursg events %= 1s ticks
 scoreboard players operation daysg events %= 1s ticks
+scoreboard players operation yearsg events %= 1s ticks
 scoreboard players operation log events %= 1s ticks
 
 scoreboard players operation * events = timer ticks
@@ -27,6 +29,7 @@ scoreboard players operation days events %= 1d ticks
 
 scoreboard players operation hoursg events %= 1hg ticks
 scoreboard players operation daysg events %= 1dg ticks
+scoreboard players operation yearsg events %= 1yg ticks
 
 scoreboard players operation log events %= 2m ticks
 
@@ -42,9 +45,12 @@ execute if score days events matches 0 run scoreboard players add days ticks 1
 
 execute if score log events matches 0 run scoreboard players add hoursg ticks 0
 execute if score log events matches 0 run scoreboard players add daysg ticks 0
+execute if score log events matches 0 run scoreboard players add yearsg ticks 0
 
 execute if score hoursg events matches 0 run scoreboard players add hoursg ticks 1
 execute if score daysg events matches 0 run scoreboard players set hoursg ticks 0
 execute if score daysg events matches 0 run scoreboard players add daysg ticks 1
+execute if score yearsg events matches 0 run scoreboard players set daysg ticks 0
+execute if score yearsg events matches 0 run scoreboard players add yearsg ticks 1
 
-execute if score log events matches 0 run tellraw @a {"rawtext":[{"text":"§6§lIRL: §r§d"}, {"score":{"name": "days", "objective": "ticks"}}, {"text" :"d §r§a"}, {"score":{"name": "hours","objective": "ticks"}}, {"text" : "h §r§b"}, {"score":{"name": "minutes", "objective": "ticks"}}, {"text" : "m §r- "}, {"text" : "§i§lMC: §r§d"}, {"score":{"name": "daysg","objective": "ticks"}}, {"text" :"d §r§a"}, {"score":{"name": "hoursg","objective": "ticks"}}, {"text" : "h §r§b"}]}
+execute if score log events matches 0 run tellraw @a {"rawtext":[{"text":"§6§lIRL: §r§d"}, {"score":{"name": "days", "objective": "ticks"}}, {"text" :"d §r§a"}, {"score":{"name": "hours","objective": "ticks"}}, {"text" : "h §r§b"}, {"score":{"name": "minutes", "objective": "ticks"}}, {"text" : "m §r- "}, {"text" : "§i§lMC: §r§c"}, {"score":{"name": "yearsg","objective": "ticks"}}, {"text" :"y §r§d"}, {"score":{"name": "daysg","objective": "ticks"}}, {"text" :"d §r§a"}, {"score":{"name": "hoursg","objective": "ticks"}}, {"text" : "h §r§b"}]}
